@@ -5,7 +5,7 @@ from .serializers import ArticleSerializer
 
 
 class QueryViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [filters.SearchFilter]
     search_fields = ['id']
     http_method_names = ['get', 'post', 'delete']

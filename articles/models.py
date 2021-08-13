@@ -12,8 +12,8 @@ class Article(models.Model):
     text = models.TextField()
     pub_date = models.DateField(auto_now_add=True)
 
-    def __str__(self):
-        return self.name
-
     class Meta:
         ordering = ['id']
+
+    def __str__(self):
+        return self.name

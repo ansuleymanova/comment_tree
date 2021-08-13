@@ -6,5 +6,4 @@ from .models import Comment
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ['author', 'pub_date', 'text',
-        'nesting_level', 'parent_comment']
+        fields = ['id', 'author', 'pub_date', 'text', 'depth', 'parent_comment']
