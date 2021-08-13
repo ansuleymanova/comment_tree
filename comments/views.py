@@ -15,10 +15,9 @@ class QueryViewSet(viewsets.ModelViewSet):
     http_method_names = ['get', 'post', 'delete']
 
 
-class CommentViewSet(viewsets.ModelViewSet):
+class CommentViewSet(QueryViewSet):
     """
     general comment viewset:
-    perform_create method is redefined to save uneditable fields
     and is used to POST comments of depth 0
     get_queryset method hits database once
     and returns only comments with depth up to 3

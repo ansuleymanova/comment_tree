@@ -5,6 +5,8 @@ from .views import ChildCommentsViewSet, CommentViewSet
 
 v1_router = DefaultRouter()
 
+v1_router.register(r'comments', CommentViewSet, basename='comments')
+
 v1_router.register(
     r'articles/(?P<article_id>[\d]+)/comments',
     CommentViewSet,

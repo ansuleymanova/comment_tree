@@ -11,6 +11,6 @@ class QueryViewSet(viewsets.ModelViewSet):
     http_method_names = ['get', 'post', 'delete']
 
 
-class ArticleViewSet(viewsets.ModelViewSet):
+class ArticleViewSet(QueryViewSet):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer

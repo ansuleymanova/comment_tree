@@ -32,11 +32,12 @@ From root direcrory of the project run:
 docker-compose up -d --build
 ```
 
-I prefer running migrations malually, to do that run following:
+I prefer running migrations manually, to do that run following:
 
 ```
 docker-compose exec web python manage.py makemigrations articles comments
 docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py collectstatic
 ```
 
 To create superuser run:
@@ -51,11 +52,8 @@ Apply initial data:
 docker-compose exec web python manage.py loaddata fixtures.json
 ```
 
-All is set! Now you can run your server and check the results on http://127.0.0.1/api/v1 :
+All is set! Now you can check the results at http://127.0.0.1/api/v1
 
-```
-docker-compose exec web python manage.py runserver
-```
+## API Specs
 
-
-TURN OFF DEBUG
+After the setup API specifications can be found at http://127.0.0.1/swagger or http://127.0.0.1/redoc
