@@ -14,9 +14,13 @@ Default query for an article's comments includes only comments up to 3rd nesting
 Endpoints are created by REST DefaultRouter. API is versioned, api root is ```api/v1/```. Please note: CORS headers need to be configured additionally!
 
 ```hhtp://127.0.0.1/api/v1/articles``` returns paginated list of articles.
+
 ```hhtp://127.0.0.1/api/v1/articles/<article-id>``` returns specific article by id.
+
 ```hhtp://127.0.0.1/api/v1/articles/<article-id>/comments``` returns paginated article's comments UP TO third nesting level.
+
 ```hhtp://127.0.0.1/api/v1/articles/<article-id>/comments/<article-id>``` returns specific comment by id.
+
 ```hhtp://127.0.0.1/api/v1/articles/<article-id>/comments/<article-id>/child-comments``` returns comments of depth 4 and deeper for a specefic comment.
 
 ## Permissions
